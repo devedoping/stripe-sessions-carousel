@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 24px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.gradient-text {
+    background: linear-gradient(90.48deg, #AB5BFB 0.18%, #7690EA 59.75%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.session {
+    background: linear-gradient(170.16deg, #FAF6FF 7.39%, #F3F5FF 92.61%);
+    border-radius: 100px;
+    width: 1200px;
+    margin: auto;
+    padding: 96px 100px;
+}
+
+.session__content {
+    width: 60%;
+    margin-bottom: 24px;
+}
+
+.session__slider {
+    position: relative;
+    top: -38px;
+}
+
+.session__slider__sliders {
+    display: flex;
+}
+
+.session__slider__sliders__slide {
+    flex: 2;
+    min-height: 456px;
+    position: relative;
+    filter: grayscale(1);
+    margin: 0 8px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s;
+    border: 1px solid transparent;
+}
+
+.session__slider__sliders__slide:first-child {
+    margin-left: 0;
+}
+
+.session__slider__sliders__slide--expand {
+    flex: 7;
+    filter: grayscale(0);
+    border: 1px solid #AB5BFB;
+}
+
+.person__job-title {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.person__name {
+    display: none;
+    position: absolute;
+    top: 46px;
+    left: 30px;
+    font-size: 24px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.session__slider__sliders__slide--expand .person__name,
+.session__slider__sliders__slide--expand .person__job-title {
+    display: block;
+}
+
+.person__img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.session__slider__nav {
+    text-align: right;
+    margin-right: 8px;
+    position: relative;
+    top: -16px;
+}
+
+.session__slider__nav__btn {
+    background: url(img/icon-right.svg) no-repeat center;
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    border: none;
+    cursor: pointer;
+}
+
+.session__slider__nav__btn--left {
+    transform: rotate(-180deg);
+}
+
+.session__slider__nav__btn--disable {
+    filter: grayscale(1);
+    cursor: not-allowed;
+}
